@@ -4,7 +4,14 @@ import { useState } from "react";
 const initialTodos: string[] = ["Todo 1", "Todo 2", "Todo 3"];
 
 export default function TodoComponent() {
-    const [todos, addTodo] = useState<string[]>(initialTodos)
+    const [todos, addTodo] = useState<string[]>(initialTodos);
+
+    const handleAddTodo = (value: string) => {
+        addTodo(
+            [...todos, value]
+        )
+    }
+
     return (
         <div className="todo">
             <TodoList todos={todos}></TodoList>
@@ -12,14 +19,10 @@ export default function TodoComponent() {
         </div> 
     )
 
-    function handleAddTodo(value: string) {
-        addTodo(
-            [...todos, value]
-        )
-    }
+    
 }
 
-function TodoList(props: any) {
+const TodoList = (props: any) => {
     const listItems = props.todos.map((item: string, index: number) => <li key={index}>{item}</li>)
     return(
         <ul className="todo-list">
@@ -28,10 +31,10 @@ function TodoList(props: any) {
     )
 }
 
-function TodoForm(props: any) {
+const TodoForm = (props: any) => {
     const [value, setValue] = useState("");
 
-    function handleSubmit(event: FormEvent) {
+    const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
         props.addTodo(value);
         setValue("");
