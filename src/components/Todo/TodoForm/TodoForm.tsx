@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Input, Button, Space, Divider } from 'antd';
+import { Input, Button, Space } from 'antd';
 import { getCurrentDate, getRandomId } from '../../../utils';
 import { addTodo } from '../../../store/actions';
 import "./TodoForm.css";
