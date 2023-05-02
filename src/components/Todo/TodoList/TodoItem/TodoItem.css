@@ -1,0 +1,34 @@
+.todo-item {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.todo-item__body {
+    width: calc(100% - 140px);
+    padding-left: 20px;
+}
+
+.todo-item__date {
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.todo-item__controls {
+    width: 120px;
+}
+
+.todo-item__textarea {
+    width: 100%;
+}
+
+.todo-item__status {
+    position: absolute;
+    right: 8px;
+    top: 12px;
+}

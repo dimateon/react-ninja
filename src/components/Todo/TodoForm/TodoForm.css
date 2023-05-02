@@ -1,0 +1,10 @@
+.todo-form {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+}
+
+.todo-form__textarea {
+    margin-bottom: 20px;
+}
